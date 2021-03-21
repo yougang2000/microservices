@@ -6,7 +6,7 @@ metadata:
     run: customer
   name: customer
 spec:
-  replicas: 1
+  replicas: 6
   selector:
     matchLabels:
       run: customer
