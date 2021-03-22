@@ -6,7 +6,7 @@ metadata:
     run: order
   name: order
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       run: order
