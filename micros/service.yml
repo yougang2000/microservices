@@ -13,5 +13,6 @@ spec:
   selector:
     run: apache
   type: NodePort
+  - port: 30003
 status:
   loadBalancer: {}
