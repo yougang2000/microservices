@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: apache
+    country: usa
   name: apache
 spec:
   ports:
