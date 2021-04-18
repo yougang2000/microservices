@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
+    country: cameroon
     run: apache
   name: apache
 spec:
