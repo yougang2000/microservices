@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: catalog
+    app: ordering
   name: catalog
 spec:
   ports:
