@@ -3,9 +3,8 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-  
     run: customer
-    app: cust
+    
   name: customer
 spec:
   replicas: 2
