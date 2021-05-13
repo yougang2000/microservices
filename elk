@@ -1,0 +1,18 @@
+#curl -X POST -H "Content-Type: application/json" -H "kbn-xsrf: true" "http://localhost:5601/api/kibana/dashboards/import" -d @export.json
+#curl -X POST "localhost:5601/api/saved_objects/_import -H "kbn-xsrf: true" --form file=@file.ndjson" -H 'kbn-xsrf: true'
+import os
+
+
+url-kibana="localhost:5601/api/"
+
+add-dashboard="curl -X POST -H "Content-Type: application/json" -H "kbn-xsrf: true" 'http://"+url-kibana+"kibana/dashboards/import'   -d @"
+
+add_index="curl -f -XPOST -H 'Content-Type: application/json' -H 'kbn-xsrf: anything' '"+url-kibana+"saved_objects/index-pattern/"
+dashboard-location="some-location.json"
+index-name = "index-*"
+
+#dashboard
+os.system(add-dashboard+"dashboard-name")
+
+#Create index pattern
+os.system(add_index+index-name+"' '-d{\"attributes\":{\"title\":\""+index-name+"\",\"timeFieldName\":\"@timestamp\"}}'")
