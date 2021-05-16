@@ -1,4 +1,4 @@
-#! /bin/bash
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -8,7 +8,7 @@ metadata:
     run: apache
   name: apache
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       run: apache
